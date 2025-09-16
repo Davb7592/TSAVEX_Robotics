@@ -29,3 +29,7 @@ comp = Competition(user_control, autonomous)
 
 # actions to do when the program starts
 brain.screen.clear_screen()
+motor14 = Motor(Ports.PORT14)
+motor14.spin(FORWARD)
+wait(2, SECONDS)
+motor14.stop()
