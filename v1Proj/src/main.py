@@ -26,11 +26,11 @@ def user_control():
         rightY = controller.axis2.position()
         leftX = controller.axis4.position()
         leftY = controller.axis3.position()
-        print("\n\n\n\n\n\n\n\n\n\n")
-        print(rightX)
-        print(rightY)
-        print(leftX)
-        print(leftY)
+        brain.screen.clear_screen()
+        brain.screen.print("Right X: ", rightX)
+        brain.screen.print("Right Y: ", rightY)
+        brain.screen.print("Left X: ", leftX)
+        brain.screen.print("Left Y: ", leftY)
 
         finalLeftMotorPow, finalRightMotorPow = leftY, leftY
         
