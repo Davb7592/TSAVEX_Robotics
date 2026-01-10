@@ -21,7 +21,7 @@ def user_control():
     brain.screen.clear_screen()
     brain.screen.print("driver control")
     # place driver control in this while loop
-    while True:
+    while True
         rightX = controller.axis1.position()
         rightY = controller.axis2.position()
         leftX = controller.axis4.position()
