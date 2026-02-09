@@ -40,18 +40,30 @@ def user_control():
                 finalRightMotorPow -= 0.75 * rightX
             elif rightX < 0:
                 finalLeftMotorPow += 0.75 * rightX
-            leftMotor.spin(FORWARD, finalLeftMotorPow)
-            rightMotor.spin(REVERSE, finalRightMotorPow)
+            leftMotor1.spin(FORWARD, finalLeftMotorPow)
+            leftMotor2.spin(FORWARD, finalLeftMotorPow)
+            leftMotor3.spin(FORWARD, finalLeftMotorPow)
+            rightMotor1.spin(REVERSE, finalRightMotorPow)
+            rightMotor2.spin(REVERSE, finalRightMotorPow)
+            rightMotor3.spin(REVERSE, finalRightMotorPow)
         elif leftY < 0:
             if rightX > 0:
                 finalRightMotorPow += 0.75 * rightX
             elif rightX < 0:
                 finalLeftMotorPow -= 0.75 * rightX
-            leftMotor.spin(FORWARD, finalLeftMotorPow)
-            rightMotor.spin(REVERSE, finalRightMotorPow)
+            leftMotor1.spin(FORWARD, finalLeftMotorPow)
+            leftMotor2.spin(FORWARD, finalLeftMotorPow)
+            leftMotor3.spin(FORWARD, finalLeftMotorPow)
+            rightMotor1.spin(REVERSE, finalRightMotorPow)
+            rightMotor2.spin(REVERSE, finalRightMotorPow)
+            rightMotor3.spin(REVERSE, finalRightMotorPow)
         else:
-            leftMotor.stop()
-            rightMotor.stop()
+            leftMotor1.stop()
+            leftMotor2.stop()
+            leftMotor3.stop()
+            rightMotor1.stop()
+            rightMotor2.stop()
+            rightMotor3.stop()
         
 
 
@@ -66,8 +78,14 @@ comp = Competition(user_control, autonomous)
 brain.screen.clear_screen()
 controller = Controller()
 
-leftMotor = Motor(1)
-rightMotor = Motor(2)
+leftMotor1 = Motor(0)
+leftMotor2 = Motor(1)
+leftMotor3 = Motor(2)
+rightMotor1 = Motor(3)
+rightMotor2 = Motor(4)
+rightMotor3 = Motor(5)
+intakeMotor = Motor(6)
+upDownMotor = Motor(7)
+
 finalLeftMotorPow = 0
 finalRightMotorPow = 0
-print("a")
