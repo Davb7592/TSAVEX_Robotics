@@ -42,10 +42,10 @@ def user_control():
                 finalLeftMotorPow += 0.75 * rightX
             leftMotor1.spin(FORWARD, finalLeftMotorPow)
             leftMotor2.spin(FORWARD, finalLeftMotorPow)
-            leftMotor3.spin(FORWARD, finalLeftMotorPow)
+            leftMotor3.spin(REVERSE, finalLeftMotorPow)
             rightMotor1.spin(REVERSE, finalRightMotorPow)
             rightMotor2.spin(REVERSE, finalRightMotorPow)
-            rightMotor3.spin(REVERSE, finalRightMotorPow)
+            rightMotor3.spin(FORWARD, finalRightMotorPow)
         elif leftY < 0:
             if rightX > 0:
                 finalRightMotorPow += 0.75 * rightX
@@ -53,10 +53,10 @@ def user_control():
                 finalLeftMotorPow -= 0.75 * rightX
             leftMotor1.spin(FORWARD, finalLeftMotorPow)
             leftMotor2.spin(FORWARD, finalLeftMotorPow)
-            leftMotor3.spin(FORWARD, finalLeftMotorPow)
+            leftMotor3.spin(REVERSE, finalLeftMotorPow)
             rightMotor1.spin(REVERSE, finalRightMotorPow)
             rightMotor2.spin(REVERSE, finalRightMotorPow)
-            rightMotor3.spin(REVERSE, finalRightMotorPow)
+            rightMotor3.spin(FORWARD, finalRightMotorPow)
         else:
             leftMotor1.stop()
             leftMotor2.stop()
