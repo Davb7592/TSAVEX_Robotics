@@ -37,9 +37,9 @@ def user_control():
         
         if leftY > 0:
             if rightX > 0:
-                finalRightMotorPow -= 0.75 * rightX
+                finalRightMotorPow -= 1.25 * rightX
             elif rightX < 0:
-                finalLeftMotorPow += 0.75 * rightX
+                finalLeftMotorPow += 1.25 * rightX
             leftMotor1.spin(FORWARD, finalLeftMotorPow)
             leftMotor2.spin(FORWARD, finalLeftMotorPow)
             leftMotor3.spin(REVERSE, finalLeftMotorPow)
@@ -48,9 +48,9 @@ def user_control():
             rightMotor3.spin(FORWARD, finalRightMotorPow)
         elif leftY < 0:
             if rightX > 0:
-                finalRightMotorPow += 0.75 * rightX
+                finalRightMotorPow += 1.25 * rightX
             elif rightX < 0:
-                finalLeftMotorPow -= 0.75 * rightX
+                finalLeftMotorPow -= 1.25 * rightX
             leftMotor1.spin(FORWARD, finalLeftMotorPow)
             leftMotor2.spin(FORWARD, finalLeftMotorPow)
             leftMotor3.spin(REVERSE, finalLeftMotorPow)
